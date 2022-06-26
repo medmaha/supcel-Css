@@ -1,0 +1,79 @@
+:root {
+  --nav--box--shadow: 0px 3px 5px rgba(0, 0, 0, .1);
+  --base--box--shadow: 0px 0px 3px rgba(0, 0, 0, .1);
+  --text--color: #444;
+  --bg--color: #eee;
+  --secondary--bg--color: var(--bg--color);
+  --btn--text--color: var(--text--color);
+
+  --bold-text-color: #555;
+}
+
+$base-color-transparent: rgba(0,0,0,.2) !default;
+$text-muted: #777 !default;
+$dark-color: #333 !default;
+$light-color: #eee !default;
+
+// Font Size
+$base-font-size: 1rem !default;  
+// Spacing
+$base-margin: .5rem !default;
+$base-padding: .5rem !default;
+// Box Shadow
+$base-box-shadow: 0px 0px 5px $base-color-transparent !default;
+// Sizing
+$base-border-size: 1px !default;
+
+
+h1, h2, h3, h4, h5, h6{
+  color: var(--bold-text-color);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  list-style: none;
+  color: inherit;
+}
+
+body{
+    background-color: var(--bg--color);
+    transition: .7s ease-in-out;
+    color: #444;
+}
+body.dark-mode{
+    --text--color: rgb(174, 174, 174);
+    --bg--color: rgb(0, 0, 16);
+    --secondary--bg--color: rgb(1, 1, 13);
+    --btn--text--color: rgb(223, 223, 223);
+    --nav--box--shadow: 0px 1px 4px rgba(255, 255, 255, .2);
+    --base--box--shadow: 0px 1px 4px rgba(255, 255, 255, .2);
+    --bold-text-color: rgb(172, 172, 172);
+    background-color: rgb(0, 0, 10);
+    color: var(--text--color);
+}
+
+// Colors Depending On Theme Changes
+
+.bg-color{
+    background-color: var(--bg--color) !important;
+}
+.inverse-bg-color{
+    background-color: var(--text--color) !important;
+}
+.text-color{
+    fill: var(--text--color) !important;
+    color: var(--text--color) !important;
+}
+.inverse-text-color{
+    color: var(--bg--color) !important;
+}
+
+// Special Classes
+.box-shadow{
+    box-shadow: var(--base--box--shadow);
+}
+
+

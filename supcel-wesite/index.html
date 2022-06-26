@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../supcel-CSS/supcel.css">
+    <title>Supcel - CSS</title>
+    <script defer>
+        document.addEventListener('click',()=>{
+            document.body.classList.toggle('dark-mode')
+        })
+    </script>
+</head>
+<body class="dark-mode">
+    <!-- navbar -->
+    <nav>
+        <div class="brand">
+            Hello Supcel
+        </div>
+    </nav>
+    <nav>
+        <div class="container">
+            <div class="brand">
+                Supcel Css
+            </div>
+            <form action="" class="search-bar">
+                <input type="search" placeholder="Search 🔎">
+            </form>
+            <ul class="nav-links">
+                <li class="link">Home</li>
+                <li class="link">Grid</li>
+                <li class="link">Utilities</li>
+                <li class="link">Compnents</li>
+            </ul>
+            <div class="nav-profile">
+                <img src="./comp-1.jpeg" alt="">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Introduction -->
+    <div class="d-flex align-items-center flex-column my-3">
+        <h1 class="">
+            Getting Started
+        </h1>
+        <p class="pt-1">
+            Learn how to easily start using Supcel Css in your <br>
+            website for building responsive, mobile-first sites
+        </p>
+
+        <h2 class="dimgrey-text-darken-1 mt-4">Download</h2>
+        <p class="pt-1">
+            Supcel comes in two different forms. You can select which version you <br>
+            want depending on your preference and expertise. To start using Supcel, <br>
+            all you have to do is download one of the options below.
+        </p>
+
+        <div class="d-flex justify-content-around width-50 pt-3">
+            <button href="" class="btn-large btn-outline-dimgrey text-hover-white-darken-2">
+                supcel Css
+                <svg class="dimgrey-icon cyan-on-hover" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="M480 352h-133.5l-45.25 45.25C289.2 409.3 273.1 416 256 416s-33.16-6.656-45.25-18.75L165.5 352H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96C512 366.3 497.7 352 480 352zM432 456c-13.2 0-24-10.8-24-24c0-13.2 10.8-24 24-24s24 10.8 24 24C456 445.2 445.2 456 432 456zM233.4 374.6C239.6 380.9 247.8 384 256 384s16.38-3.125 22.62-9.375l128-128c12.49-12.5 12.49-32.75 0-45.25c-12.5-12.5-32.76-12.5-45.25 0L288 274.8V32c0-17.67-14.33-32-32-32C238.3 0 224 14.33 224 32v242.8L150.6 201.4c-12.49-12.5-32.75-12.5-45.25 0c-12.49 12.5-12.49 32.75 0 45.25L233.4 374.6z"/></svg>
+            </button>
+            <button href="" class="btn-large btn-outline-blue text-hover-white-darken-2">
+                supcel Css
+                <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                    <path d="M480 352h-133.5l-45.25 45.25C289.2 409.3 273.1 416 256 416s-33.16-6.656-45.25-18.75L165.5 352H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96C512 366.3 497.7 352 480 352zM432 456c-13.2 0-24-10.8-24-24c0-13.2 10.8-24 24-24s24 10.8 24 24C456 445.2 445.2 456 432 456zM233.4 374.6C239.6 380.9 247.8 384 256 384s16.38-3.125 22.62-9.375l128-128c12.49-12.5 12.49-32.75 0-45.25c-12.5-12.5-32.76-12.5-45.25 0L288 274.8V32c0-17.67-14.33-32-32-32C238.3 0 224 14.33 224 32v242.8L150.6 201.4c-12.49-12.5-32.75-12.5-45.25 0c-12.49 12.5-12.49 32.75 0 45.25L233.4 374.6z"/></svg>
+            </button>
+        </div>
+
+    </div>
+
+    <!-- Components -->
+    <div class="container mb-4">
+        <span id="buttons">
+            <h3 class="my-2 d-flex justify-content-center"> *Buttons </h3>
+            <div class="d-flex m-2 gap-1 align-items-center justify-content-center">
+                <span>
+                    <button class="btn-small btn-cyan">small</button>
+                </span>
+                <span>
+                    <button class="btn">normal</button>
+                </span>
+                <span>
+                    <button class="btn-large btn-outline-dimgrey">Large</button>
+                </span>
+                <span>
+                    <button class="btn-teal btn-large white-text">large</button>
+                </span>
+                <span>
+                    <button class="btn btn-outline-lime text-hover-white-darken-2">outline</button>
+                </span>
+                <span>
+                    <button class="btn-small olive white-text">small</button>
+                </span>
+            </div>
+            <div class="d-flex justify-content-center">
+            <p class="blue-lighten-5 p-3 white-text">
+                ClassName: btn <br>
+                Values: ( btn-small, btn-large ) <br>
+                Coloring: (btn-COLORNAME, btn-outline-COLORNAME)
+            </p>
+            </div>
+        </span>
+        <span id="card">
+            <h3 class="my-3 d-flex justify-content-center"> *Cards </h3>
+            <div class="row mb-4 gap-1 justify-content-center">
+                <div class="col-12-xs col-6-sm col-3-md">
+                    <div class="card">
+                        <div class="card-title">
+                            Card Title
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                Card body <br>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias totam culpa illum debitis, fugiat voluptate reiciendis commodi tenetur iste hic officiis, maiores consequatur veniam doloribus dolores at non sequi distinctio!
+                            </p>
+                        </div>
+                        <div class="card-links">
+                            <a href="#">Link-1</a>
+                            <a href="#">Link-2</a>
+                            <a href="#">Link-3</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12-xs col-6-sm col-3-md">
+                    <div class="card">
+                        <div class="card-title">
+                            Card Title
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                Card body <br>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias totam culpa illum debitis, fugiat voluptate reiciendis commodi tenetur iste hic officiis, maiores consequatur veniam doloribus dolores at non sequi distinctio!
+                            </p>
+                        </div>
+                        <div class="card-links">
+                            <a href="#">Link-1</a>
+                            <a href="#">Link-2</a>
+                            <a href="#">Link-3</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12-xs col-6-sm col-3-md">
+                    <div class="card">
+                        <div class="card-title">
+                            Card Title
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                Card body <br>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias totam culpa illum debitis, fugiat voluptate reiciendis commodi tenetur iste hic officiis, maiores consequatur veniam doloribus dolores at non sequi distinctio!
+                            </p>
+                        </div>
+                        <div class="card-links">
+                            <a href="#">Link-1</a>
+                            <a href="#">Link-2</a>
+                            <a href="#">Link-3</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12-xs col-6-sm col-3-md">
+                    <div class="card">
+                        <div class="card-title">
+                            Card Title
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                Card body <br>
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias totam culpa illum debitis, fugiat voluptate reiciendis commodi tenetur iste hic officiis, maiores consequatur veniam doloribus dolores at non sequi distinctio!
+                            </p>
+                        </div>
+                        <div class="card-links">
+                            <a href="#">Link-1</a>
+                            <a href="#">Link-2</a>
+                            <a href="#">Link-3</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- coding -->
+                <div class="d-flex justify-content-center">
+                    <p class="blue-lighten-5 p-3 white-text">
+                        ClassName: card <br>
+                        supElements: ( card-title, card-body, card-links(a, link) ) <br>
+                        Coloring: ( COLORNAME )
+                    </p>
+                </div>
+            </div>
+        </span>
+        <span id="navbar">
+            <nav class="blue mb-2">
+                <div class="brand white-text">
+                    Brand
+                </div>
+                <ul class="nav-links">
+                    <li class="link">Link-1</li>
+                    <li class="link">Link-3</li>
+                    <li class="link">Link-2</li>
+                </ul>
+            </nav>
+            <nav class="mb-2">
+                <div class="brand">
+                    Brand
+                </div>
+                <form action="" class="search-bar">
+                    <input type="search" placeholder="Search Bar">
+                </form>
+            </nav>
+            <nav class="olive mb-2">
+                <div class="brand white-text">
+                    Brand
+                </div>
+                <form action="" class="search-bar">
+                    <input type="search" placeholder="Search Bar" class="border-color-white white-darken-lighten-3">
+                </form>
+                <ul class="nav-links">
+                    <li class="link white-text text-hover-olive-lighten-5">Link-1</li>
+                    <li class="link white-text text-hover-olive-lighten-5">Link-2</li>
+                    <li class="link white-text text-hover-olive-lighten-5">Link-3</li>
+                    <li class="link white-text text-hover-olive-lighten-5">Link-4</li>
+                </ul>
+
+            </nav>
+            <nav class="cyan mb-2">
+                <div class="brand black-text-lighten-4">
+                    Brand
+                </div>
+                <form action="" class="search-bar">
+                    <input type="search" placeholder="Search Bar" class="border-color-black white-darken-lighten-3 black-text-lighten-4">
+                </form>
+                <ul class="nav-links">
+                    <li class="link black-text text-hover-dimgrey-darken-1">Link-1</li>
+                    <li class="link black-text text-hover-dimgrey-darken-1">Link-2</li>
+                    <li class="link black-text text-hover-dimgrey-darken-1">Link-3</li>
+                    <li class="link black-text text-hover-dimgrey-darken-1">Link-4</li>
+                    <li class="link black-text text-hover-dimgrey-darken-1">Link-4</li>
+                </ul>
+                <div class="nav-profile">
+                    <img src="./comp-1.jpeg" class="border-color-dimgrey">
+                </div>
+            </nav>
+            <!-- coding -->
+                <div class="d-flex justify-content-center">
+                    <p class="blue-lighten-5 p-3 white-text">
+                        ClassName: nav <br>
+                        supElements: ( brand, search-bar, nav-links(a, link) ) <br>
+                        Coloring: ( COLORNAME )
+                    </p>
+                </div>
+        </span>
+    </div>
+</body>
+</html>

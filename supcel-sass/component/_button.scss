@@ -1,0 +1,61 @@
+@mixin btn($bg-color: transparent) {
+    padding: $base-padding $base-padding * 2;
+    border: none;
+    outline: none;
+    margin: 0;
+    border-radius: .3rem;
+    box-shadow: var(--base--box--shadow);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    text-transform: capitalize;
+    transition: background-color .4s ease-in-out;
+    color: var(--btn--text--color);
+    background-color: $bg-color;
+    cursor: pointer;
+    
+    svg{
+        transition: fill .4s ease-in-out;
+        font-size: 1.5rem;
+        fill: var(--text--color);
+    }
+    &:hover,
+    &:hover svg{
+        color: var(--btn--text--color);
+        fill: mix($bg-color, white, 25%);
+    }
+}
+
+
+.btn{
+    @include btn;
+}
+
+.btn-small{
+    @include btn;
+    padding: calc($base-padding / 2) $base-padding !important;
+    font-size: $base-font-size - .3 !important;
+}
+.btn-large{
+    @include btn;
+    padding: $base-padding * 2 $base-padding * 4 !important;
+    font-size: $base-font-size + .5 !important;
+}
+
+@each $key, $value in $colors {
+    .btn-#{$key}{
+        @include btn($value);
+        &:hover{
+            background-color: darken($color: $value, $amount: 10%);
+        }
+    }
+
+    .btn-outline-#{$key}{
+        @include btn;
+        border: $base-border-size solid $value;
+        &:hover{
+            background-color: $value;
+        }
+    }
+}

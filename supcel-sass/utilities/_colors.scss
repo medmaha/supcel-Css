@@ -1,0 +1,126 @@
+// Color pallete
+@use'sass:math';
+
+$colors: (
+    'blue': blue,
+    'grey': grey,
+    'red': red,
+    'lime': lime,
+    'olive': olive,
+    'chocolate': chocolate,
+    'cyan': cyan,
+    'dimgrey': dimgray,
+    'silver': silver,
+    'violet': violet,
+    'bisque': bisque,
+    'success': green, 
+    'danger': red,
+    'black': black,
+    'white': white,
+    'orange': orange,
+    'purple': purple,
+    'yellow': yellow,
+    'brown': brown,
+    'pink': rgb(255, 121, 143),
+    'teal': teal,
+);
+
+@each $key, $val in $colors {
+    .#{$key}{
+        background-color: $val !important;
+    }
+    .#{$key}-text{
+        color: $val !important;
+    }
+    
+    @for $idx from 1 through 5 {
+        @if ($val != white){
+            $amount: $idx * 5%;
+            .#{$key}-text-lighten-#{$idx}{
+                color: lighten($color: $val, $amount: $amount) !important;
+            }
+        }
+        @if ($val != black){
+            $amount: $idx * 5%;
+            .#{$key}-text-darken-#{$idx}{
+                color: darken($color: $val, $amount: $amount) !important;
+            }
+        }
+    }
+    @for $idx from 1 through 5 {
+        @if ($val != white){
+            $amount: $idx * 5%;
+            .#{$key}-lighten-#{$idx}{
+                background-color: lighten($color: $val, $amount: $amount) !important;
+            }
+        }
+        @if ($val != black){
+            $amount: $idx * 5%;
+            .#{$key}-darken-#{$idx}{
+                background-color: darken($color: $val, $amount: $amount) !important;
+            }
+        }
+    }
+
+}
+
+// Hover Colores
+@each $key, $val in $colors{
+    .hover-#{$key}{
+        transition: background-color .4s;
+        &:hover{
+            background-color: $val !important;
+        }
+    }
+    .text-hover-#{$key}{
+        transition: color .4s;
+        &:hover{
+            color: $val !important;
+        }
+    }
+    @for $idx from 1 through 5{
+        @if ($val != white){
+            $amt: $idx * 5%;
+            .hover-#{$key}-lighten-#{$idx}{
+                transition: background-color .4s;
+                &:hover{
+                    background-color: lighten($color: $val, $amount: $amt) !important;
+                }
+            }
+            .text-hover-#{$key}-lighten-#{$idx}{
+                transition: color .4s;
+                &:hover{
+                    color: lighten($color: $val, $amount: $amt) !important;
+                }
+            }
+        }
+        @if ($val != black){
+            $amt: $idx * 5%;
+            .hover-#{$key}-lighten-#{$idx}{
+                transition: background-color .4s;
+                &:hover{
+                    background-color: darken($color: $val, $amount: $amt) !important;
+                }
+            }
+            .text-hover-#{$key}-darken-#{$idx}{
+                transition: color .4s;
+                &:hover{
+                    color: darken($color: $val, $amount: $amt) !important;
+                }
+            }
+        }
+    }
+}
+
+@each $key, $val in $colors {
+    svg.#{$key}-icon{
+        fill: $val;
+    }
+    svg.#{$key}-on-hover{
+        // transition: fill .4s ease-in-out;
+        &:hover{
+            fill: darken($color: $val, $amount: 10%);
+        }
+    }
+    
+}

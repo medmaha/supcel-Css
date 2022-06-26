@@ -1,0 +1,156 @@
+%flex-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav{
+    @extend %flex-wrapper;
+    @extend .text-color;
+    padding: $base-padding * .75;
+    height: 65px;
+    background-color: var(--secondary--bg--color);
+    box-shadow: var(--nav--box--shadow);
+    transition: .7s ease-in-out;
+
+    .container{
+        height: 100%;
+        padding: 0 .5rem;
+        @extend %flex-wrapper;
+    }
+    
+    .brand{
+        max-width: 15%;
+        white-space: nowrap;
+        @include xs{
+            font-size: $base-font-size;
+        }
+        @include md{
+            font-size: $base-font-size * 1.3;
+        }
+        @include xl{
+            font-size: $base-font-size * 1.8;
+        }
+    }
+    form.search-bar{
+        gap: 5px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 35%;
+        input{
+            color: var(--text-color);
+            @include xs{
+                width: 100%;
+                ::placeholder{
+                    font-size: .75rem;
+                }
+            }
+            @include sm{
+                width: 100%;
+                ::placeholder{
+                    font-size: .9rem;
+                }
+            }
+            @include md{
+                width: 100%;
+                ::placeholder{
+                    font-size: small;
+                }
+            }
+            @include lg{
+                height: 2.5rem;
+                width: 100%;
+                // max-width: 500px;
+            }
+
+        }
+    }
+    .nav-links{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 1.5rem;
+        height: 100%;
+        
+        @include sm{
+            font-size: smaller;
+            max-width: 38%;
+            gap: .8rem;
+            svg{
+                width: $base-font-size  * .95;
+            }
+        }
+        @media (max-width: 720px) {
+            display: none;
+        }
+        @include md{
+            font-size: small;
+            max-width: 45%;
+            gap: 1.3rem;
+            svg{
+                width: $base-font-size;
+            }
+        }
+        @include lg{
+            font-size: $base-font-size;
+            max-width: 50%;
+            svg{
+                width: $base-font-size 1.5;
+            }
+        }
+
+        
+        @mixin link {
+            padding: 0 .2rem;
+            font-size: $base-font-size;
+            white-space: nowrap;
+            transition: color .2s;
+            cursor: pointer;
+            &:hover{
+                color: rgb(12, 147, 147) !important;
+            }
+            svg{
+                @extend .text-color;
+                transition: .3s ease-in-out;
+                &:hover{
+                    transform: scale(1.1);
+                    fill: rgb(12, 147, 147) !important;
+                }
+            }
+        }
+        a, .link,
+        .link a{
+            @include link;
+        }
+    }
+    .nav-profile{
+        border: 1px solid $text-muted;
+        border-radius: 50%;
+        overflow: hidden;
+        cursor: pointer;
+
+        @include xs{
+            min-width: 7.7%;
+            max-width: 8%;
+        }
+        @include sm{
+            min-width: 5.7%;
+            max-width: 6%;
+        }
+        @include md{
+            min-width: 3.8%;
+            max-width: 4%;
+        }
+        @include xl{
+            min-width: 3.8%;
+            max-width: 4%;
+        }
+        
+        img{
+            aspect-ratio: 1.2;
+            width: 100%;
+            object-fit: fill;
+        }
+    }
+}
