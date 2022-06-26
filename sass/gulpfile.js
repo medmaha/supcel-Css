@@ -4,7 +4,7 @@ const sass = require('gulp-sass')(require('sass'))
 function compiledStyles(){
     return src('./*.scss')
         .pipe(sass())
-        .pipe(dest('../supcel-CSS'))
+        .pipe(dest('../css'))
 }
 
 function watchSassChanges() {
